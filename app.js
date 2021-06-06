@@ -1,8 +1,8 @@
 import Button from "./Components/Button";
 import MenuItem from "./Components/MenuItem";
 
-const menu = [
-  new MenuItem({
+const menu = []
+ /* new MenuItem({
     id: 1,
     title: "buttermilk pancakes",
     category: "breakfast",
@@ -76,13 +76,18 @@ const menu = [
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   }),
 ];
-
+  
+  
+  */
 const buttonsContainer = document.querySelector("#section2");
 const menuContainer = document.querySelector("#section3");
 
 function displayMenuItems(menuItems) {
   if (menuItems.length === 0) {
-    menuContainer.innerHTML = "<div class = \"no-items\" >There's no items </div>";
+    menuContainer.innerHTML = "<div class = \"no-items\"> <div class=\"lds-heart\"><div></div></div>There's no items </div>";
+    
+    
+    
   } else {
     const displayItems = menuItems.map((item) => item.render()).join("");
     menuContainer.innerHTML = displayItems;
